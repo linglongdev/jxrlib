@@ -1,0 +1,23 @@
+package:
+  id: jxrlib
+  name: jxrlib
+  version: 1.1.1
+  kind: lib
+  description: |
+    jxrlib.
+
+base:
+  id: org.deepin.base
+  version: 20.5.0
+
+source:
+  kind: git
+  url: https://github.com/deepin-community/jxrlib.git
+  version: master
+  commit: 291d4c8fe95d7f68da18f49ebbefeb39c92d336a
+  patch:
+  - usecmake.patch
+  - bug748590.patch
+  - typos.patch
+build:
+  kind: cmake
